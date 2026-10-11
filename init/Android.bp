@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: Apache-2.0
+cc_library_static {
+    name: "init_flourite",
+    recovery_available: true,
+    srcs: ["init_flourite.cpp"],
+    shared_libs: ["libbase"],
+    include_dirs: ["system/core/init"],
+}

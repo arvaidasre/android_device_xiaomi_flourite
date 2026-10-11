@@ -288,6 +288,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/zz.flourite.strongbox.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/zz.flourite.strongbox.rc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.flourite.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.flourite.nfc.rc \
+    hardware/nxp/keymint/generic/HAL/android.hardware.hardware_keystore.jc-strongbox-keymint3.nxp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_flourite_global/android.hardware.strongbox_keystore.xml
+
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore_V3.xml
 

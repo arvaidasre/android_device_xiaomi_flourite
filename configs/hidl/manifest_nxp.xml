@@ -1,0 +1,27 @@
+<manifest version="7.0" type="device">
+    <hal format="aidl">
+        <name>vendor.nxp.nxpnfc_aidl</name>
+        <version>1</version>
+        <fqname>INxpNfc/default</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.keymint</name>
+        <version>3</version>
+        <fqname>IKeyMintDevice/strongbox</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.keymint</name>
+        <version>3</version>
+        <fqname>IRemotelyProvisionedComponent/strongbox</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.security.sharedsecret</name>
+        <version>1</version>
+        <fqname>ISharedSecret/strongbox</fqname>
+    </hal>
+    <hal format="aidl">
+        <name>android.hardware.weaver</name>
+        <version>2</version>
+        <fqname>IWeaver/default</fqname>
+    </hal>
+</manifest>

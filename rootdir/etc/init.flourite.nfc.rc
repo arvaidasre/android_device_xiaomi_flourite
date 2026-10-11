@@ -1,0 +1,25 @@
+service nfc_hal_service.tms.aidl /vendor/bin/hw/android.hardware.nfc-service-tms
+    class hal
+    user nfc
+    group nfc secure_element
+    disabled
+
+service secure_element_hal_service.aidl /vendor/bin/hw/android.hardware.secure_element-service-tms
+    class hal
+    user system
+    group system readproc nfc secure_element
+    disabled
+
+on post-fs-data && property:ro.boot.product.vendor.sku=flourite_cn
+    mkdir /data/vendor/nfc_socket 0770 nfc nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
+    mkdir /data/vendor/secure_element 0770 system secure_element
+    start nfc_hal_service.tms.aidl
+    start secure_element_hal_service.aidl
+
+on post-fs-data && property:ro.boot.product.vendor.sku=flourite_global
+    start vendor.nfc_hal_service
+    start vendor.secure_element
+    start vendor.weaver_nxp
+    start vendor.keymint-strongbox

@@ -2,6 +2,7 @@
 # The stock service also runs with the NXP group and WAKE_ALARM capability.
 service vendor.keymint-strongbox /vendor/bin/hw/android.hardware.security.keymint3-service.strongbox.nxp
     override
+    disabled
     class early_hal
     user vendor_nxp_strongbox
     group vendor_nxp_strongbox

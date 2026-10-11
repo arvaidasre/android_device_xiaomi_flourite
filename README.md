@@ -10,6 +10,20 @@ Place this tree at `device/xiaomi/flourite`, the matching kernel prebuilts at
 Extract proprietary files into `vendor/xiaomi/flourite` using `extract-files.py`.
 Camera blob corrections are applied during extraction.
 
+Use extracted stock **OS3.0.306.0.WPRMIXM** as the base and
+**OS3.0.318.0.WPRCNXM** for the CN camera/NFC additions:
+
+```sh
+PYTHONPATH=tools/extract-utils python3 device/xiaomi/flourite/extract-files.py /path/to/global-dump \
+    --china-source /path/to/china-dump
+```
+
+`firmware-sources.json` pins the CN additions by SHA-256. Only those paths
+come from CN; shared camera libraries and radio images stay on the Global
+base. Keep both original dumps separate. A Global-only dump is insufficient
+for a clean unified extraction. Apply compatibility patch 0006 before building
+so StrongBox is declared only for the NXP variants.
+
 ```sh
 source build/envsetup.sh
 breakfast flourite

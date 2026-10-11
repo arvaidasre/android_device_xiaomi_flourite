@@ -121,6 +121,11 @@
 
 # NFC
 /odm/bin/hw/android\.hardware\.nqnfc-service\.nxp u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc-service-tms u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/android\.hardware\.secure_element-service-tms u:object_r:hal_secure_element_default_exec:s0
+/dev/tms_nfc u:object_r:nfc_device:s0
+/dev/tms_ese u:object_r:secure_element_device:s0
+/data/vendor/nfc_socket(/.*)? u:object_r:vendor_nfc_vendor_data_file:s0
 
 # Subsystem restart: keep the coredump controls separate from generic sysfs.
 /sys/devices/platform/soc/3000000\.remoteproc-adsp/remoteproc/remoteproc[0-9]+/coredump u:object_r:vendor_sysfs_ssr_coredump_toggle:s0

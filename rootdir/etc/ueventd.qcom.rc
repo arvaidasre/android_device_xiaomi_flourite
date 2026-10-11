@@ -392,6 +392,9 @@ subsystem mem_buf_vm
 /sys/devices/virtual/net/bond0 queues/rx-0/rps_cpus 0660 system system
 
 #nfc permissions
+/dev/tms_nfc              0660    nfc         nfc
+/dev/tms_ese              0660    system      secure_element
+/sys/nfc                 chip_name 0444 root root
 /dev/nfc-nci              0660    nfc         nfc
 /dev/nq-nci               0660    nfc         nfc
 /dev/assd                 0660    nfc         nfc

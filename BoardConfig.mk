@@ -83,7 +83,17 @@ DEVICE_FRAMEWORK_MANIFEST_FILE += \
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
-    $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml
+    $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml \
+    $(DEVICE_PATH)/configs/hidl/manifest_nxp.xml
+
+DEVICE_MANIFEST_SKUS += flourite_cn flourite_global
+DEVICE_MANIFEST_FLOURITE_CN_FILES := \
+    $(DEVICE_PATH)/configs/hidl/manifest_vendor.xml \
+    $(DEVICE_PATH)/configs/hidl/manifest_tms.xml
+DEVICE_MANIFEST_FLOURITE_GLOBAL_FILES := $(DEVICE_MANIFEST_FILE)
+
+$(call soong_config_set,libinit,vendor_init_lib,init_flourite)
+$(call soong_config_set_bool,nxp_keymint,sku_manifests,true)
 
 ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest_odm.xml
 
