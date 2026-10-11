@@ -32,6 +32,22 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
+        <name>vendor.tms.tmsese_aidl</name>
+        <version>1</version>
+        <interface>
+            <name>ITmsEse</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.tms.tmsnfc_aidl</name>
+        <version>1</version>
+        <interface>
+            <name>ITmsNfc</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
         <name>vendor.xiaomi.hardware.aidl.intentaware</name>
         <version>1</version>
         <interface>
