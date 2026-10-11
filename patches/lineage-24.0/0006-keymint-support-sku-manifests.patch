@@ -1,0 +1,47 @@
+From: lufrz <314570110+lufrz@users.noreply.github.com>
+Subject: [PATCH] keymint: allow device-owned SKU manifests
+
+Let unified devices supply per-SKU StrongBox declarations and features.
+Keep the default installation unchanged for other devices.
+
+--- a/generic/HAL/Android.bp
++++ b/generic/HAL/Android.bp
+@@ -43,20 +43,24 @@
+         "libjc_keymint_defaults.nxp",
+     ],
+     init_rc: ["android.hardware.security.keymint3-service.strongbox.nxp.rc"],
+-    vintf_fragment_modules: [
+-        "android.hardware.security.keymint3-service.strongbox.nxp.xml",
+-        "android.hardware.security.sharedsecret-service.strongbox3.nxp.xml",
+-    ],
+-    shared_libs: [
+-        "android.hardware.security.keymint-V3-ndk",
+-        "lib_android_keymaster_keymint_utils_V3",
+-    ],
+-    srcs: [
+-        "KeyMint3Service.cpp",
+-    ],
+-    required: [
+-        "android.hardware.hardware_keystore.jc-strongbox-keymint3.nxp.xml",
+-    ],
++    vintf_fragment_modules: select(soong_config_variable("nxp_keymint", "sku_manifests"), {
++        true: [],
++        default: [
++            "android.hardware.security.keymint3-service.strongbox.nxp.xml",
++            "android.hardware.security.sharedsecret-service.strongbox3.nxp.xml",
++        ],
++    }),
++    shared_libs: [
++        "android.hardware.security.keymint-V3-ndk",
++        "lib_android_keymaster_keymint_utils_V3",
++    ],
++    srcs: [
++        "KeyMint3Service.cpp",
++    ],
++    required: select(soong_config_variable("nxp_keymint", "sku_manifests"), {
++        true: [],
++        default: ["android.hardware.hardware_keystore.jc-strongbox-keymint3.nxp.xml"],
++    }),
+     cflags: [
+         "-DOMAPI_TRANSPORT",
+         "-DNXP_EXTNS",
