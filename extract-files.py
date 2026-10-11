@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import argparse
+import sys
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -21,6 +24,7 @@ from camera_graphicbuffer_fixup import fixup_camera_graphicbuffer
 from camera_raw_metadata_fixup import fixup_camera_raw_metadata, verify_camera_raw_metadata
 from camera_night_metadata_fixup import fixup_camera_night_metadata
 from camera_night_tuning_fixup import fixup_camera_night_tuning
+from firmware_sources import FlouriteExtractUtils
 
 namespace_imports = [
     'device/xiaomi/flourite',
@@ -66,6 +70,14 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    # The device init script selects NXP or TMS before starting any NFC HAL.
+    (
+        'odm/etc/init/nfc-service-nxp.rc',
+        'odm/etc/init/android.hardware.weaver-service.nxp.rc',
+        'vendor/etc/init/android.hardware.secure_element-service.qti.rc',
+    ): blob_fixup()
+        .regex_replace(r'(?m)^    disabled\r?\n', '')
+        .regex_replace(r'(?m)^(service [^\r\n]+)', r'\1\n    disabled'),
     # Dedicated Night profile for OVX8000; leave S5KHPE tuning unchanged.
     (
         'odm/lib64/camera/com.qti.tuned.flourite_sunny_ovx8000_wide_gl_ii.bin',
@@ -305,5 +317,10 @@ module = ExtractUtilsModule(
 )
 
 if __name__ == '__main__':
-    utils = ExtractUtils.device(module)
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('--china-source', help='Extracted OS3.0.318.0.WPRCNXM stock directory')
+    variant_args, remaining = parser.parse_known_args()
+    sys.argv[1:] = remaining
+    utils = FlouriteExtractUtils.device(module)
+    utils.china_source = variant_args.china_source
     utils.run()

@@ -1,9 +1,43 @@
 ## Proprietary files for flourite.
+## CN additions are pinned in firmware-sources.json; use --china-source.
 ##
 ## Refreshed from Xiaomi OS3.0.306.0.WPRMIXM (Android 16), preserving the
 ## SM7635/volcano references, then closed over stock ELF dependencies.
 ## Regenerate with tools/generate-proprietary-files.py and prune only
 ## after a successful build plus on-device hardware validation.
+
+# China variant
+vendor/lib64/7816-3-T1.so
+odm/lib64/camera/com.qti.sensormodule.flourite_aac_ov08f10_ultra_ii.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_aac_ov32d40_front_ii.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_aac_ov50m40_tele_ii.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_ofilm_ov08f10_ultra_i.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_ofilm_ov32d40_front_i.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_ofilm_ov50m40_tele_i.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_ofilm_ovx8000_wide_i.cn.bin
+odm/lib64/camera/com.qti.sensormodule.flourite_sunny_ovx8000_wide_ii.cn.bin
+odm/lib64/camera/com.qti.tuned.flourite_aac_ov08f10_ultra_cn_ii.bin
+odm/lib64/camera/com.qti.tuned.flourite_aac_ov50m40_tele_cn_ii.bin
+odm/lib64/camera/com.qti.tuned.flourite_ofilm_ov08f10_ultra_cn_i.bin
+odm/lib64/camera/com.qti.tuned.flourite_ofilm_ov50m40_tele_cn_i.bin
+odm/lib64/camera/com.qti.tuned.flourite_ofilm_ovx8000_wide_cn_i.bin
+odm/lib64/camera/com.qti.tuned.flourite_sunny_ovx8000_wide_cn_ii.bin
+vendor/bin/hw/android.hardware.nfc-service-tms
+vendor/bin/hw/android.hardware.secure_element-service-tms
+vendor/etc/SEC_THN31_FW_VTP.txt.bin
+vendor/etc/libese-tms.conf
+vendor/etc/libnfc-tms.conf
+vendor/etc/libnfc-tms_RF.conf
+vendor/etc/libnfc-tms_RF_EC2.conf
+vendor/etc/libnfc-tms_RF_GB1.conf
+vendor/lib64/libtms_oma.so
+vendor/lib64/libtms_seimpl_tee.so
+vendor/lib64/nfc_nci.thn31nfc.tms.so
+vendor/lib64/tms-cos-dl-common.so
+vendor/lib64/tms-cos-dl-ree.so
+vendor/lib64/tms-utils.so
+vendor/lib64/vendor.tms.tmsese_aidl-V1-ndk.so
+vendor/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so
 
 # Odm
 odm/bin/EL_calib
@@ -1174,9 +1208,7 @@ odm/etc/touch/gameturbotool-fastinput.json
 odm/etc/touch/gameturbotool.json
 odm/etc/usecaseKvManager.xml
 odm/etc/vintf/manifest/android.hardware.biometrics.face-v3.xml
-odm/etc/vintf/manifest/android.hardware.weaver-service.nxp.xml
 odm/etc/vintf/manifest/gnss-default.xml:odm/etc/vintf/manifest/flourite-gnss-default.xml;TRYSRCFIRST
-odm/etc/vintf/manifest/manifest_nxp_nfc_ese.xml
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.aidl.mtdservice.xml
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.aidl.tidaservice.xml
 odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mfidoca.xml
