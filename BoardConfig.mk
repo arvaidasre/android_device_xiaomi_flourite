@@ -110,6 +110,7 @@ TARGET_KERNEL_VERSION := 6.1
 # Soong still needs the matching kernel tree to generate Qualcomm UAPI headers
 # when the bootable kernel image and modules are supplied as prebuilts.
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm7635
+TARGET_KERNEL_CLANG_VERSION := r584948b
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/pineapple_GKI.config \
