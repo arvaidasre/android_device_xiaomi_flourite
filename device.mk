@@ -33,16 +33,10 @@ PRODUCT_SOURCE_ROOT_DIRS += -kernel/xiaomi
 
 # Keep stock Xiaomi AIDL libraries.
 # Some hardware/xiaomi forks also define these prebuilt module names.
-# Rodin's optional trees depend on that implementation and are not inputs to
-# this product; exclude the complete group when sharing a checkout with rodin.
 PRODUCT_SOURCE_ROOT_DIRS += \
     -hardware/xiaomi/interfaces/xiaomi/hardware/displayfeature_aidl \
     -hardware/xiaomi/interfaces/xiaomi/hardware/fingerprintextension/aidl \
-    -hardware/xiaomi/interfaces/xiaomi/hw/touchfeature/aidl \
-    -device/xiaomi/rodin \
-    -device/xiaomi/rodin-miuicamera \
-    -vendor/xiaomi/rodin \
-    -vendor/xiaomi/rodin-miuicamera
+    -hardware/xiaomi/interfaces/xiaomi/hw/touchfeature/aidl
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
