@@ -1,5 +1,13 @@
 hal_client_domain(hal_power_default, hal_touchfeature_xiaomi)
 
+# ADPF must update app threads across their MLS categories.
+typeattribute hal_power_default mlstrustedsubject;
+
+# ADPF adjusts utilization clamps on client threads, not global CPU limits.
+allow hal_power_default self:capability sys_nice;
+allow hal_power_default { appdomain surfaceflinger system_server }:process { getsched setsched };
+allow hal_power_default sysfs_devices_system_cpu:dir r_dir_perms;
+
 allow hal_power_default proc_walt:dir search;
 allow hal_power_default proc_walt:file rw_file_perms;
 allow hal_power_default vendor_sysfs_msm_perf:file rw_file_perms;
