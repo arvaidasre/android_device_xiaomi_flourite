@@ -258,3 +258,11 @@ include vendor/xiaomi/flourite/BoardConfigVendor.mk
 ifneq ($(wildcard device/xiaomi/flourite-miuicamera/device.mk),)
 include device/xiaomi/flourite-miuicamera/BoardConfig.mk
 endif
+
+# Opt in to a complete, separately built source kernel distribution.
+ifneq ($(strip $(FLOURITE_SOURCE_KERNEL_DIST)),)
+ifeq ($(FLOURITE_BUILD_KERNEL_FROM_SOURCE),true)
+$(error Select either FLOURITE_SOURCE_KERNEL_DIST or the legacy kernel build)
+endif
+include $(FLOURITE_SOURCE_KERNEL_DIST)/BoardConfigKernel.mk
+endif
