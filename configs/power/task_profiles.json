@@ -1,0 +1,17 @@
+{
+    "Comment": "WALT has no Tensor sched_qos interface. These optional tags are neutral; ADPF applies and resets per-thread uclamp through sched_setattr.",
+    "Profiles": [
+        {
+            "Name": "SCHED_QOS_SENSITIVE_STANDARD",
+            "Actions": []
+        },
+        {
+            "Name": "SCHED_QOS_SENSITIVE_EXTREME",
+            "Actions": []
+        },
+        {
+            "Name": "SCHED_QOS_NONE",
+            "Actions": []
+        }
+    ]
+}

@@ -201,6 +201,12 @@ vendor.netflix.bsp_rev=Q7635-39449-1
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power HAL: the stock display driver does not expose an idle_state node.
+vendor.powerhal.disp.idle_support=false
+vendor.powerhal.interaction.min=180
+vendor.powerhal.interaction.max=500
+vendor.powerhal.interaction.offset=0
+
 # QCOM
 ro.soc.manufacturer=QTI
 ro.soc.model=SM7635

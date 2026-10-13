@@ -5,7 +5,7 @@
 
 #define LOG_TAG "PowerMode.flourite"
 
-#include <aidl/android/hardware/power/BnPower.h>
+#include <aidl/android/hardware/power/Mode.h>
 #include <android-base/logging.h>
 #include <android/binder_auto_utils.h>
 #include <android/binder_ibinder.h>
@@ -13,6 +13,7 @@
 #include <android/binder_parcel.h>
 #include <android/binder_stability.h>
 #include <android/binder_status.h>
+#include <perfmgr/HintManager.h>
 
 #include <mutex>
 
@@ -129,7 +130,9 @@ bool setDoubleTapMode(bool enabled) {
 
 }  // namespace
 
-namespace aidl::android::hardware::power::impl {
+namespace aidl::google::hardware::power::impl::pixel {
+
+using ::android::perfmgr::HintManager;
 
 bool isDeviceSpecificModeSupported(Mode type, bool* out) {
     if (type != Mode::DOUBLE_TAP_TO_WAKE) {
@@ -141,12 +144,27 @@ bool isDeviceSpecificModeSupported(Mode type, bool* out) {
 }
 
 bool setDeviceSpecificMode(Mode type, bool enabled) {
+    if (type == Mode::INTERACTIVE) {
+        // Release and suppress UI boosts while the display is asleep.
+        if (enabled) {
+            HintManager::GetInstance()->EndHint("SCREEN_OFF");
+        } else {
+            HintManager::GetInstance()->DoHint("SCREEN_OFF");
+        }
+        return false;
+    }
     if (type != Mode::DOUBLE_TAP_TO_WAKE) {
         return false;
     }
 
-    setDoubleTapMode(enabled);
+    if (setDoubleTapMode(enabled)) {
+        if (enabled) {
+            HintManager::GetInstance()->DoHint("DOUBLE_TAP_TO_WAKE");
+        } else {
+            HintManager::GetInstance()->EndHint("DOUBLE_TAP_TO_WAKE");
+        }
+    }
     return true;
 }
 
-}  // namespace aidl::android::hardware::power::impl
+}  // namespace aidl::google::hardware::power::impl::pixel

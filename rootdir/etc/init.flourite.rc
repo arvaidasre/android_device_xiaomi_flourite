@@ -38,6 +38,12 @@ on boot
     chown system system /sys/bus/platform/devices/soc:xiaomi_fingerprint/intr2
     chmod 0660 /sys/bus/platform/devices/soc:xiaomi_fingerprint/intr2
 
+    # Start libperfmgr's node worker after the boot-time sysfs setup.
+    setprop vendor.powerhal.init 1
+
+on charger
+    setprop vendor.powerhal.init 1
+
 on post-fs-data
     mkdir /data/vendor/misc/mi_fp 0770 system system
     mkdir /data/vendor/fpc 0770 system system

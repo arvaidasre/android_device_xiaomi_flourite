@@ -396,13 +396,19 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 
 # Power
-$(call soong_config_set,qtipower,mode_ext_lib,power-ext-flourite)
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):power-ext-flourite)
 
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.lineage-libperfmgr
 
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/power/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
+# Keep the XML for the proprietary perfd clients (camera, fingerprint, etc.).
+# Tensor QoS tags are optional; WALT ADPF uses per-thread sched_setattr instead.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # QSPA
 PRODUCT_PACKAGES += \
@@ -414,6 +420,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/google/pixel/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/nxp/keymint/generic \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi \

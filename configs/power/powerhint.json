@@ -1,0 +1,583 @@
+{
+  "Nodes": [
+    {
+      "Name": "CPULittleMin",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq",
+      "Values": [
+        "1228800",
+        "1113600",
+        "595200"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUBigMin",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq",
+      "Values": [
+        "1824000",
+        "1612800",
+        "1401600",
+        "633600"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "CPUPrimeMin",
+      "Path": "/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq",
+      "Values": [
+        "1900800",
+        "1651200",
+        "1324800",
+        "633600"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "GPUMinFreq",
+      "Paths": [
+        "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq"
+      ],
+      "Values": [
+        "644000000",
+        "510000000",
+        "0"
+      ],
+      "ResetOnInit": true,
+      "Truncate": false,
+      "AllowFailure": true
+    },
+    {
+      "Name": "PowerHALState",
+      "Path": "vendor.powerhal.state",
+      "Values": [
+        "INTERACTIVE",
+        ""
+      ],
+      "Type": "Property",
+      "ResetOnInit": true
+    },
+    {
+      "Name": "DoubleTapState",
+      "Path": "vendor.powerhal.double_tap",
+      "Values": [
+        "1",
+        "0"
+      ],
+      "Type": "Property",
+      "ResetOnInit": true
+    },
+    {
+      "Name": "AdpfProfile",
+      "Paths": [
+        "<AdpfConfig>:OTHER",
+        "<AdpfConfig>:APP"
+      ],
+      "Values": [
+        "ADPF_LOW_POWER",
+        "ADPF_GAME",
+        "ADPF_DEFAULT"
+      ],
+      "Type": "Event",
+      "ResetOnInit": true
+    },
+    {
+      "Name": "AdpfUiProfile",
+      "Paths": [
+        "<AdpfConfig>:SURFACEFLINGER",
+        "<AdpfConfig>:HWUI",
+        "<AdpfConfig>:SYSUI"
+      ],
+      "Values": [
+        "ADPF_LOW_POWER",
+        "ADPF_UI"
+      ],
+      "Type": "Event",
+      "ResetOnInit": true
+    },
+    {
+      "Name": "AdpfGameProfile",
+      "Paths": [
+        "<AdpfConfig>:GAME"
+      ],
+      "Values": [
+        "ADPF_LOW_POWER",
+        "ADPF_GAME"
+      ],
+      "Type": "Event",
+      "ResetOnInit": true
+    }
+  ],
+  "Actions": [
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPULittleMin",
+      "Value": "1113600",
+      "Duration": 180
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUBigMin",
+      "Value": "1401600",
+      "Duration": 180
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GPUMinFreq",
+      "Value": "510000000",
+      "Duration": 180
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPULittleMin",
+      "Value": "1228800",
+      "Duration": 1200
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUBigMin",
+      "Value": "1824000",
+      "Duration": 1200
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "CPUPrimeMin",
+      "Value": "1900800",
+      "Duration": 1200
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Value": "644000000",
+      "Duration": 1000
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CPULittleMin",
+      "Value": "1113600",
+      "Duration": 1500
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CPUBigMin",
+      "Value": "1612800",
+      "Duration": 1500
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "CPUPrimeMin",
+      "Value": "1651200",
+      "Duration": 1500
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "GPUMinFreq",
+      "Value": "510000000",
+      "Duration": 600
+    },
+    {
+      "PowerHint": "CAMERA_SHOT",
+      "Node": "CPULittleMin",
+      "Value": "1113600",
+      "Duration": 1000
+    },
+    {
+      "PowerHint": "CAMERA_SHOT",
+      "Node": "CPUBigMin",
+      "Value": "1612800",
+      "Duration": 1000
+    },
+    {
+      "PowerHint": "CAMERA_SHOT",
+      "Node": "CPUPrimeMin",
+      "Value": "1324800",
+      "Duration": 1000
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPUBigMin",
+      "Value": "1401600",
+      "Duration": 120
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "GPUMinFreq",
+      "Value": "510000000",
+      "Duration": 120
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "CPUBigMin",
+      "Value": "1401600",
+      "Duration": 250
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUMinFreq",
+      "Value": "510000000",
+      "Duration": 250
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "AdpfProfile",
+      "Value": "ADPF_GAME",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "GAME_LOADING",
+      "Node": "CPULittleMin",
+      "Value": "1228800",
+      "Duration": 2000
+    },
+    {
+      "PowerHint": "GAME_LOADING",
+      "Node": "CPUBigMin",
+      "Value": "1824000",
+      "Duration": 2000
+    },
+    {
+      "PowerHint": "GAME_LOADING",
+      "Node": "CPUPrimeMin",
+      "Value": "1900800",
+      "Duration": 2000
+    },
+    {
+      "PowerHint": "GAME_LOADING",
+      "Node": "GPUMinFreq",
+      "Value": "644000000",
+      "Duration": 1500
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "PowerHALState",
+      "Value": "INTERACTIVE",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "DOUBLE_TAP_TO_WAKE",
+      "Node": "DoubleTapState",
+      "Value": "1",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "AdpfProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "AdpfUiProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Node": "AdpfGameProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "LAUNCH"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "LAUNCH"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "CAMERA_LAUNCH"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "CAMERA_LAUNCH"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "CAMERA_SHOT"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "CAMERA_SHOT"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "EndHint",
+      "Value": "GAME_LOADING"
+    },
+    {
+      "PowerHint": "LOW_POWER",
+      "Type": "MaskHint",
+      "Value": "GAME_LOADING"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Node": "AdpfProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Node": "AdpfUiProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Node": "AdpfGameProfile",
+      "Value": "ADPF_LOW_POWER",
+      "Duration": 0
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "INTERACTION"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "LAUNCH"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "LAUNCH"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "CAMERA_LAUNCH"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "CAMERA_LAUNCH"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "CAMERA_SHOT"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "CAMERA_SHOT"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "EXPENSIVE_RENDERING"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "EndHint",
+      "Value": "GAME_LOADING"
+    },
+    {
+      "PowerHint": "SCREEN_OFF",
+      "Type": "MaskHint",
+      "Value": "GAME_LOADING"
+    }
+  ],
+  "AdpfConfig": [
+    {
+      "Name": "ADPF_DEFAULT",
+      "PID_On": true,
+      "PID_Po": 5,
+      "PID_Pu": 3,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -120,
+      "PID_Do": 500,
+      "PID_Du": 0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 100,
+      "UclampMin_LoadUp": 200,
+      "UclampMin_LoadReset": 100,
+      "UclampMin_High": 384,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1,
+      "StaleTimeFactor": 5,
+      "GpuBoost": false,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 3,
+      "HBoostOffMaxAvgDurRatio": 1.5,
+      "HBoostSevereJankPidPu": 2.0,
+      "HBoostSevereJankThreshold": 6,
+      "HBoostUclampMinCeilingRange": [384, 448],
+      "HBoostUclampMinFloorRange": [64, 128],
+      "JankCheckTimeFactor": 1.15,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 20
+    },
+    {
+      "Name": "ADPF_UI",
+      "PID_On": true,
+      "PID_Po": 5,
+      "PID_Pu": 3,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -120,
+      "PID_Do": 500,
+      "PID_Du": 0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 180,
+      "UclampMin_LoadUp": 320,
+      "UclampMin_LoadReset": 180,
+      "UclampMin_High": 576,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1,
+      "StaleTimeFactor": 5,
+      "GpuBoost": false,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 2,
+      "HBoostOffMaxAvgDurRatio": 1.5,
+      "HBoostSevereJankPidPu": 2.0,
+      "HBoostSevereJankThreshold": 4,
+      "HBoostUclampMinCeilingRange": [576, 704],
+      "HBoostUclampMinFloorRange": [128, 224],
+      "JankCheckTimeFactor": 1.15,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 20
+    },
+    {
+      "Name": "ADPF_GAME",
+      "PID_On": true,
+      "PID_Po": 5,
+      "PID_Pu": 3,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -120,
+      "PID_Do": 500,
+      "PID_Du": 0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 160,
+      "UclampMin_LoadUp": 384,
+      "UclampMin_LoadReset": 160,
+      "UclampMin_High": 640,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1,
+      "StaleTimeFactor": 5,
+      "GpuBoost": false,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 3,
+      "HBoostOffMaxAvgDurRatio": 1.5,
+      "HBoostSevereJankPidPu": 2.0,
+      "HBoostSevereJankThreshold": 6,
+      "HBoostUclampMinCeilingRange": [640, 768],
+      "HBoostUclampMinFloorRange": [128, 256],
+      "JankCheckTimeFactor": 1.15,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 20
+    },
+    {
+      "Name": "ADPF_LOW_POWER",
+      "PID_On": true,
+      "PID_Po": 5,
+      "PID_Pu": 3,
+      "PID_I": 0.001,
+      "PID_I_Init": 200,
+      "PID_I_High": 512,
+      "PID_I_Low": -120,
+      "PID_Do": 500,
+      "PID_Du": 0,
+      "SamplingWindow_P": 1,
+      "SamplingWindow_I": 0,
+      "SamplingWindow_D": 1,
+      "UclampMin_On": true,
+      "UclampMin_Init": 0,
+      "UclampMin_LoadUp": 100,
+      "UclampMin_LoadReset": 0,
+      "UclampMin_High": 256,
+      "UclampMin_Low": 0,
+      "ReportingRateLimitNs": 8333333,
+      "TargetTimeFactor": 1,
+      "StaleTimeFactor": 5,
+      "GpuBoost": false,
+      "HeuristicBoost_On": true,
+      "HBoostModerateJankThreshold": 4,
+      "HBoostOffMaxAvgDurRatio": 1.5,
+      "HBoostSevereJankPidPu": 3.0,
+      "HBoostSevereJankThreshold": 8,
+      "HBoostUclampMinCeilingRange": [256, 256],
+      "HBoostUclampMinFloorRange": [0, 32],
+      "JankCheckTimeFactor": 1.15,
+      "LowFrameRateThreshold": 25,
+      "MaxRecordsNum": 20
+    }
+  ],
+  "OtherConfigs": {
+    "EnableMetricCollection": false
+  }
+}

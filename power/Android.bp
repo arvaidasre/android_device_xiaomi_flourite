@@ -16,5 +16,8 @@ cc_library_static {
     shared_libs: [
         "libbase",
         "libbinder_ndk",
+        "libperfmgr",
+        "libutils",
     ],
+    static_libs: ["powerhal_flags-aconfig-cc"],
 }
