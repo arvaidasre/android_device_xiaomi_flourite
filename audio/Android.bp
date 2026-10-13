@@ -1,0 +1,58 @@
+// SPDX-License-Identifier: Apache-2.0
+
+// Keep the stock audio layout available under both VINTF variant SKUs.
+install_symlink {
+    name: "flourite_audio_odm_cn_symlink",
+    device_specific: true,
+    installed_location: "etc/audio/sku_flourite_cn",
+    symlink_target: "sku_volcano",
+}
+
+install_symlink {
+    name: "flourite_audio_odm_global_symlink",
+    device_specific: true,
+    installed_location: "etc/audio/sku_flourite_global",
+    symlink_target: "sku_volcano",
+}
+
+install_symlink {
+    name: "flourite_audio_odm_cn_qssi_symlink",
+    device_specific: true,
+    installed_location: "etc/audio/sku_flourite_cn_qssi",
+    symlink_target: "sku_volcano_qssi",
+}
+
+install_symlink {
+    name: "flourite_audio_odm_global_qssi_symlink",
+    device_specific: true,
+    installed_location: "etc/audio/sku_flourite_global_qssi",
+    symlink_target: "sku_volcano_qssi",
+}
+
+install_symlink {
+    name: "flourite_audio_vendor_cn_symlink",
+    vendor: true,
+    installed_location: "etc/audio/sku_flourite_cn",
+    symlink_target: "sku_volcano",
+}
+
+install_symlink {
+    name: "flourite_audio_vendor_global_symlink",
+    vendor: true,
+    installed_location: "etc/audio/sku_flourite_global",
+    symlink_target: "sku_volcano",
+}
+
+install_symlink {
+    name: "flourite_audio_vendor_cn_qssi_symlink",
+    vendor: true,
+    installed_location: "etc/audio/sku_flourite_cn_qssi",
+    symlink_target: "sku_volcano_qssi",
+}
+
+install_symlink {
+    name: "flourite_audio_vendor_global_qssi_symlink",
+    vendor: true,
+    installed_location: "etc/audio/sku_flourite_global_qssi",
+    symlink_target: "sku_volcano_qssi",
+}

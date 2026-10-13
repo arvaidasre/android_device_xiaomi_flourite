@@ -81,6 +81,16 @@ PRODUCT_PACKAGES += \
     manifest_flourite_audio.xml
 
 PRODUCT_PACKAGES += \
+    flourite_audio_odm_cn_symlink \
+    flourite_audio_odm_cn_qssi_symlink \
+    flourite_audio_odm_global_symlink \
+    flourite_audio_odm_global_qssi_symlink \
+    flourite_audio_vendor_cn_symlink \
+    flourite_audio_vendor_cn_qssi_symlink \
+    flourite_audio_vendor_global_symlink \
+    flourite_audio_vendor_global_qssi_symlink
+
+PRODUCT_PACKAGES += \
     audioadsprpcd \
     audio.bluetooth.default \
     audio.r_submix.default \
