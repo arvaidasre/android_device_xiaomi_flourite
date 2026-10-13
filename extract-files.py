@@ -24,6 +24,7 @@ from camera_graphicbuffer_fixup import fixup_camera_graphicbuffer
 from camera_raw_metadata_fixup import fixup_camera_raw_metadata, verify_camera_raw_metadata
 from camera_night_metadata_fixup import fixup_camera_night_metadata
 from camera_night_tuning_fixup import fixup_camera_night_tuning
+from camera_performance_fixup import fixup_camera_performance
 from firmware_sources import FlouriteExtractUtils
 
 namespace_imports = [
@@ -70,6 +71,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/camera/cameraopt_perf.json': blob_fixup()
+        .call(fixup_camera_performance),
     # The device init script selects NXP or TMS before starting any NFC HAL.
     (
         'odm/etc/init/nfc-service-nxp.rc',

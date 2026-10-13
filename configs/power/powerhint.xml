@@ -204,18 +204,15 @@
         <!--DOWNMIGRATE - 10 85 -->
         <!--SCHED_IDLE_ENOUGH Set 0 -->
         <!--L CPU - Set hispeed freq 787200 -->
-        <!--Min partial halt titanium core numbers 0-->
-        <!--Titanium core state2 offline timeout 20-->
         <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_LITTLE 556800 -->
         <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_BIG 0 -->
-        <!-- MPCTLV3_SCHEDUTIL_RTG_BOOST_FREQ_CLUSTER_TITANIUM 0 -->
         <!-- MPCTLV3_GOLD_DYNPREFETCHER_OPCODE 1 -->
         <Config
             Id="0x00001330" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="0x4183C000, 0x21, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x21, 0x43020000, 0x64,
             0x43024000, 0, 0x4303C000, 0x858B8 ,0x40804100, 2035, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63,
-            0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055, 0x43C0C000, 0, 0x4143C100, 0x313, 0x41010300, 1,
-            0x41014300, 0x14, 0x4144C100, 0x87F00, 0x4144C000, 0x0, 0x4144C300, 0x0, 0x42C40000, 1"/>
+            0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055, 0x43C0C000, 0, 0x4143C100, 0x313,
+            0x4144C100, 0x87F00, 0x4144C000, 0x0, 0x42C40000, 1"/>
 
         <!--camera 30fps-->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -233,15 +230,13 @@
         <!--DOWNMIGRATE - 10 85 -->
         <!--SCHED_IDLE_ENOUGH Set 0 -->
         <!--L CPU - Set hispeed freq 787200 -->
-        <!--Min partial halt titanium core numbers 1-->
-        <!--Titanium core state2 offline timeout 20-->
         <!-- MPCTLV3_GOLD_DYNPREFETCHER_OPCODE 1 -->
         <Config
             Id="0x00001331" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="0x4183C000, 0x21, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x21,
             0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x858B8 ,0x40804100, 2035, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63,
             0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055, 0x41008000, 0, 0x41008100, 0, 0x41008200, 0, 0x43C0C000, 0, 0x4143C100, 0x313,
-            0x41010300, 1, 0x41014300, 0x14, 0x42C40000, 1"/>
+            0x42C40000, 1"/>
 
         <!--camera 60fps-->
         <!--CPU-LLC BWMON - Set sample_ms 16 -->
@@ -259,15 +254,13 @@
         <!--DOWNMIGRATE - 10 85-->
         <!--SCHED_IDLE_ENOUGH Set 0 -->
         <!--L CPU - Set hispeed freq 787200 -->
-        <!--Min partial halt titanium core numbers 1-->
-        <!--Titanium core state2 offline timeout 20-->
         <!-- MPCTLV3_GOLD_DYNPREFETCHER_OPCODE 1 -->
         <Config
             Id="0x00001332" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="0x4183C000, 0x10, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x10,
-            0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x17BA38,  0x40804100, 2035, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63,
+            0x43020000, 0x64, 0x43024000, 0, 0x4303C000, 0x17BA38, 0x40804100, 2035, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63,
             0x40CE0000, 0x0032000A, 0x40CE0200, 0x00550055, 0x41008000, 0, 0x41008100, 0, 0x41008200, 0, 0x43C0C000, 0, 0x4143C100, 0x313,
-            0x41010300, 1, 0x41014300, 0x14, 0x42C40000, 1"/>
+            0x42C40000, 1"/>
 
         <!--camera HFR 120/240 fps-->
         <!--CPU-LLC BWMON - Set sample_ms 16 -->
@@ -310,15 +303,13 @@
         <!--P CPU - Disable Core Control -->
         <!--SCHED_IDLE_ENOUGH Set 0 -->
         <!--L CPU - Set hispeed freq 787200 -->
-        <!--Min partial halt titanium core numbers 1-->
-        <!--Titanium core state2 offline timeout 20-->
         <!-- MPCTLV3_GOLD_DYNPREFETCHER_OPCODE 1 -->
         <Config
             Id="0x00001335" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="0x4183C000, 0x21, 0x41834000, 0x64, 0x41838000, 0, 0x43034000, 0x21,
             0x43020000, 0x64, 0x43024000, 0, 0x40804100, 2035, 0x41444100, 0, 0x41444000, 0, 0x41440000, 0x63,
             0x40CE0000, 0x0028000A, 0x40CE0200, 0x00550055, 0x41008000, 0, 0x41008100, 0, 0x41008200, 0, 0x43C0C000, 0, 0x4143C100, 0x313,
-            0x41010300, 1, 0x41014300, 0x14, 0x42C40000, 1"/>
+            0x42C40000, 1"/>
 
         <!--video encode HFR 480 fps-->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -343,11 +334,8 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, (0x43C28000, 4096) -->
@@ -365,18 +353,14 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512,
-            0x5FC8C000, 60
-            "/>
+            0x5FC8C000, 60"/>
 
         <!-- camera close tunings-->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -387,8 +371,6 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, (0x43C28000, 4096) -->
@@ -406,15 +388,12 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512,
-            0x5FC8C000, 60
-            "/>
+            0x5FC8C000, 60"/>
 
         <!-- camera snapshot tunings-->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -425,19 +404,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2841 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 3148 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 2 (freq 770 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x00001339" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -450,21 +425,16 @@
             0x40800000, 2841,
             0x40804200, 3187,
             0x40800200, 2688,
-            0x40804300, 3148,
-            0x40800300, 2841,
             0x42808000, 0x2,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- default perview-->
         <!--CPU-LLC BWMON - Set sample_ms 33-->
@@ -479,7 +449,6 @@
         <!--B CPU - Disable Core Control -->
         <!--L CPU - Disable Core Control -->
         <!--P CPU - Disable Core Control -->
-        <!-- MPCTLV3_CORE_CTL_MIN_PARTIAL_CPUS_TITANIUM - Set min_partical_cpus 0-->
         <!--Sched upmigrate    L25  B80 T90-->
         <!--Sched downmigrate  L10  B70 T80-->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
@@ -499,13 +468,10 @@
             0x41008000, 0,
             0x41008100, 0,
             0x41008200, 0,
-            0x41010300, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
-            0x5FC04000, 0x7F
-            "/>
+            0x5FC04000, 0x7F"/>
 
         <!-- PERF_LOCK_POWER_HINT_START_PREVIEW_THERMAL -->
         <!--CPU-LLC BWMON - Set sample_ms 33-->
@@ -538,9 +504,7 @@
             0x41008100, 0,
             0x41008200, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
-            0x40CE0200, 0x005A0050
-            "/>
+            0x40CE0200, 0x005A0050"/>
 
         <!-- PERF_LOCK_POWER_HINT_BOKEH_PREVIEW -->
         <!--CPU-LLC BWMON - Set sample_ms 33-->
@@ -573,11 +537,9 @@
             0x41008100, 0,
             0x41008200, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
-            0x5FC04000, 0x7F
-            "/>
+            0x5FC04000, 0x7F"/>
 
         <!-- PERF_LOCK_POWER_HINT_VLOG_PREVIEW -->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -612,13 +574,11 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
             0x41008200, 0,
-            0x43C0C000, 0
-            "/>
+            0x43C0C000, 0"/>
 
         <!-- PERF_LOCK_POWER_HINT_SAT_PREVIEW -->
         <!--CPU-LLC BWMON - Set sample_ms 33-->
@@ -670,7 +630,6 @@
             Resources="
             0x40800000, 2073,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x4183C000, 0x10,
             0x41834000, 0x64,
@@ -724,7 +683,6 @@
             0x41008200, 0,
             0x43C0C000, 0,
             0x40CE0000, 0x0014000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F"/>
@@ -767,11 +725,9 @@
             0x41008100, 0,
             0x41008200, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
-            0x5FC04000, 0x7F
-            "/>
+            0x5FC04000, 0x7F"/>
 
         <!-- PERF_LOCK_POWER_HINT_UHD_30FPS_RECORDING -->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -811,12 +767,10 @@
             0x41008100, 0,
             0x41008200, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x43C0C000, 0,
             0x5FC00000, 0x7F,
-            0x5FC04000, 0x7F
-            "/>
+            0x5FC04000, 0x7F"/>
 
         <!-- PERF_LOCK_POWER_HINT_8kUHD_24FPS_RECORDING-->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -851,7 +805,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -895,7 +848,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -926,7 +878,6 @@
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG    100-->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE 100 -->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_PRIME  100 -->
-        <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_TITAN  100 -->
         <Config
             Id="0x00001351" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="
@@ -942,7 +893,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -950,9 +900,7 @@
             0x43C0C000, 0,
             0x41450000, 100,
             0x41450100, 100,
-            0x41450200, 100,
-            0x41450300, 100
-            "/>
+            0x41450200, 100"/>
 
         <!-- PERF_LOCK_POWER_HINT_FRONT_FHD_30FPS_RECORDING -->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -987,7 +935,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1027,7 +974,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1046,7 +992,6 @@
         <!--L CPU - Disable schedutil PL -->
         <!--B CPU - Disable schedutil PL -->
         <!--B CPU - Set hispeed load 99 -->
-        <!-- MPCTLV3_CORE_CTL_MIN_PARTIAL_CPUS_TITANIUM - Set min_partical_cpus 0-->
         <!-- GPU - min pwrlevel 6 (freq 510 Mhz) -->
         <!--Sched upmigrate    L70  B75 T90-->
         <!--Sched downmigrate  L55  B60 T80-->
@@ -1057,7 +1002,6 @@
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG    256-->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE 256 -->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_PRIME  256 -->
-        <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_TITAN  256 -->
         <Config
             Id="0x00001354" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="
@@ -1071,10 +1015,8 @@
             0x41444100, 0,
             0x41444000, 0,
             0x41440000, 0x63,
-            0x41010300, 0,
             0x42804000, 0x6,
             0x40CE0000, 0x00460037,
-            0x40CE0300, 0x004B003C,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1082,8 +1024,7 @@
             0x43C0C000, 0,
             0x41450000, 256,
             0x41450100, 256,
-            0x41450200, 256,
-            0x41450300, 256"/>
+            0x41450200, 256"/>
 
         <!-- PERF_LOCK_POWER_HINT_UHD_60FPS_RECORDING -->
         <!--CPU-LLC BWMON - Set sample_ms 16 -->
@@ -1100,7 +1041,6 @@
         <!--B CPU - Disable Core Control -->
         <!--L CPU - Disable Core Control -->
         <!--P CPU - Disable Core Control -->
-        <!-- MPCTLV3_CORE_CTL_MIN_PARTIAL_CPUS_TITANIUM - Set min_partical_cpus 0-->
         <!--Sched upmigrate    L25 B80 T90-->
         <!--Sched downmigrate  L10 B70 T80-->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
@@ -1108,7 +1048,6 @@
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG    256-->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE 256 -->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_PRIME  256 -->
-        <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_TITAN  256 -->
         <Config
             Id="0x00001355" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="
@@ -1126,16 +1065,13 @@
             0x41008000, 0,
             0x41008100, 0,
             0x41008200, 0,
-            0x41010300, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
             0x41450000, 256,
             0x41450100, 256,
-            0x41450200, 256,
-            0x41450300, 256"/>
+            0x41450200, 256"/>
 
         <!-- PERF_LOCK_POWER_HINT_FRONT_FHD_60FPS_RECORDING -->
         <!--CPU-LLC BWMON - Set sample_ms 16 -->
@@ -1170,7 +1106,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1210,7 +1145,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1282,7 +1216,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1331,16 +1264,13 @@
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100), 0x46C -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000), 0x553 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITAN_CORE_0(0x40800300), 0x553 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_BIG 100-->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_LITTLE 100 -->
         <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_PRIME 100 -->
-        <!-- MPCTLV3_TARGET_LOAD_THRESH_CLUSTER_TITAN 100 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE,          4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE,          4096 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
@@ -1350,16 +1280,13 @@
             0x40400000, 0x1,
             0x40800100, 0x46C,
             0x40800000, 0x553,
-            0x40800300, 0x553,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
             0x41450000, 100,
             0x41450100, 100,
             0x41450200, 100,
-            0x41450300, 100,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512"/>
@@ -1426,7 +1353,6 @@
             0x41444000, 0,
             0x41440000, 0x63,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
@@ -1471,8 +1397,6 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
@@ -1490,15 +1414,12 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512,
-            0x5FC8C000, 60
-            "/>
+            0x5FC8C000, 60"/>
 
         <!-- camera open thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1509,11 +1430,8 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, (0x43C28000, 4096) -->
@@ -1531,18 +1449,14 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512,
-            0x5FC8C000, 60
-            "/>
+            0x5FC8C000, 60"/>
 
         <!-- camera close thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1553,8 +1467,6 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
         <!-- MPCTLV3_SCHED_CPUSET_TOP_APP, 0xF8 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, (0x43C28000, 4096) -->
@@ -1572,15 +1484,12 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x43C2C000, 512,
-            0x5FC8C000, 60
-           "/>
+            0x5FC8C000, 60"/>
 
         <!-- camera snapshot thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1591,19 +1500,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2841 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 3148 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 3 (freq 720 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x00001369" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -1616,21 +1521,16 @@
             0x40800000, 2841,
             0x40804200, 3187,
             0x40800200, 2688,
-            0x40804300, 3148,
-            0x40800300, 2841,
             0x42808000, 0x3,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- camera CONFIGURESTREAM BOOST thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1640,8 +1540,6 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 0xFFF -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 0xFFF -->
         <!--Sched upmigrate    L25  B80 T90-->
         <!--Sched downmigrate  L10  B70 T80-->
         <!-- MPCTLV3_SCHED_CPUSET_SYSTEM_BACKGROUND, 0x7 -->
@@ -1661,10 +1559,7 @@
             0x40800000, 0xFFF,
             0x40804200, 0xFFF,
             0x40800200, 0xFFF,
-            0x40804300, 0xFFF,
-            0x40800300, 0xFFF,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x40C44000, 0x7,
             0x40C3C000, 0xF8,
@@ -1672,8 +1567,7 @@
             0x43C5C000, 4096,
             0x43C4C000, 4096,
             0x43C48000, 512,
-            0x5FC8C000, 60
-            "/>
+            0x5FC8C000, 60"/>
 
         <!-- PERF_LOCK_POWER_HINT_MIUI_MOVIE-->
         <!--CPU-LLC BWMON - Set sample_ms 33-->
@@ -1708,7 +1602,6 @@
             0x41008100, 0,
             0x41008200, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F"/>
@@ -1722,16 +1615,12 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2035 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 2995 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2035 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 2899 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2035 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <Config
             Id="0x0000136C" Type="0" Enable="true" Timeout="0" Target="volcano"
             Resources="
@@ -1743,17 +1632,12 @@
             0x40800000, 2035,
             0x40804200, 2995,
             0x40800200, 2035,
-            0x40804300, 2899,
-            0x40800300, 2035,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800"/>
         <!-- PERF_LOCK_POWER_HINT_FOREGROUND -->
         <!-- Set foreground app to CPU0-6 -->
         <Config
@@ -1770,19 +1654,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2841 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 3148 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 3 (freq 720 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x0000136E" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -1795,21 +1675,16 @@
             0x40800000, 2841,
             0x40804200, 3187,
             0x40800200, 2688,
-            0x40804300, 3148,
-            0x40800300, 2841,
             0x42808000, 0x3,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- camera snapshot thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1820,19 +1695,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2841 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 3148 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 3 (freq 720 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x0000136F" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -1845,21 +1716,16 @@
             0x40800000, 2841,
             0x40804200, 3187,
             0x40800200, 2688,
-            0x40804300, 3148,
-            0x40800300, 2841,
             0x42808000, 0x3,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- camera snapshot thermal tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1870,19 +1736,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2841 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 3187 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 3148 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 3 (freq 720 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x00001370" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -1895,21 +1757,16 @@
             0x40800000, 2841,
             0x40804200, 3187,
             0x40800200, 2688,
-            0x40804300, 3148,
-            0x40800300, 2841,
             0x42808000, 0x3,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- camera infinity dsac quickShot tunings -->
         <!-- MPCTLV3_ALL_CPUS_PWR_CLPS_DIS, 0x1 -->
@@ -1920,19 +1777,15 @@
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0, 2515 -->
         <!-- MPCTLV3_MAX_FREQ_CLUSTER_PLUS_CORE_0, 2995 -->
         <!-- MPCTLV3_MIN_FREQ_CLUSTER_PLUS_CORE_0, 2688 -->
-        <!-- MPCTLV3_MAX_FREQ_CLUSTER_TITANIUM_CORE_0, 2956 -->
-        <!-- MPCTLV3_MIN_FREQ_CLUSTER_TITANIUM_CORE_0 , 2841 -->
         <!-- GPU - max pwrlevel 3 (freq 720 Mhz) -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_LITTLE , 2265600 -->
         <!-- MPCTLV3_SCHED_FMAX_CAP_BIG , 3148800 -->
-        <!-- MPCTLV3_SCHED_FMAX_CAP_TITANIUM , 2956800 -->
         <!-- MPCTLV3_CPUCTL_TOPAPP_CPUSHARE, 4096 -->
         <!-- MPCTLV3_CPUCTL_CAMERA_CPUSHARE, 4096 -->
         <!-- MPCTLV3_XIAOMI_KSWAPD_AFFINITY(0x5FC00000), 0x7F -->
         <!-- MPCTLV3_XIAOMI_KCOMPACTD_AFFINITY(0x5FC04000), 0x7F -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 4224000 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 2035200 -->
-        <!-- MPCTLV3_BUS_DCVS_LLCC_LLCC_BOOST_FREQ, 1066000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_DDR_BOOST_FREQ, 2092000 -->
+        <!-- MPCTLV3_BUS_DCVS_LLCC_L3_BOOST_FREQ, 1804800 -->
         <!-- MPCTLV3_CPUCTL_BACKGROUND_CPUSHARE,      512 -->
         <Config
             Id="0x00001371" Type="0" Enable="true" Timeout="0" Target="volcano"
@@ -1945,21 +1798,16 @@
             0x40800000, 2515,
             0x40804200, 2995,
             0x40800200, 2688,
-            0x40804300, 2956,
-            0x40800300, 2841,
             0x42808000, 0x3,
             0X43C1C100, 2265600,
             0X43C1C000, 3148800,
-            0X43C1C300, 2956800,
             0x43C28000, 4096,
             0x43C24000, 4096,
             0x5FC00000, 0x7F,
             0x5FC04000, 0x7F,
-            0x43498000, 4224000,
-            0x4349C000, 2035200,
-            0x434A0000, 1066000,
-            0X43C2C000, 512
-            "/>
+            0x43498000, 2092000,
+            0x4349C000, 1804800,
+            0X43C2C000, 512"/>
 
         <!-- camera snapshot battery emergency tunings-->
         <!--CPU-LLC BWMON - Set sample_ms 33 -->
@@ -2000,13 +1848,11 @@
             0x41444100, 0,
             0x41444000, 0,
             0x40CE0000, 0x0019000A,
-            0x40CE0300, 0x00500046,
             0x40CE0200, 0x005A0050,
             0x41008000, 0,
             0x41008100, 0,
             0x41008200, 0,
-            0x43C0C000, 0
-            "/>
+            0x43C0C000, 0"/>
 
         <!-- decode 240 fps tunings-->
         <!--L CPU - max freq 700000 -->
