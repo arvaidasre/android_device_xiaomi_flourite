@@ -99,7 +99,6 @@ ODM_MANIFEST_FILES += $(DEVICE_PATH)/configs/hidl/manifest_odm.xml
 # Kernel / device tree
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 TARGET_NEEDS_DTBOIMAGE := true
-BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
@@ -107,8 +106,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 TARGET_KERNEL_VERSION := 6.1
 
-# Soong still needs the matching kernel tree to generate Qualcomm UAPI headers
-# when the bootable kernel image and modules are supplied as prebuilts.
+# Share the kernel source with Soong's Qualcomm UAPI header generator.
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm7635
 TARGET_KERNEL_CLANG_VERSION := r584948b
 TARGET_KERNEL_CONFIG := \
@@ -132,17 +130,6 @@ BOARD_BOOTCONFIG := \
     androidboot.load_modules_parallel=true \
     androidboot.vendor.qspa=true \
     androidboot.hypervisor.protected_vm.supported=false
-
-# The stock 6.1.138 image/modules are the bootable default. Xiaomi's
-# published 6.1.68 source can be selected explicitly for compile testing.
-ifeq ($(FLOURITE_BUILD_KERNEL_FROM_SOURCE),true)
-TARGET_KERNEL_ADDITIONAL_FLAGS := TARGET_PRODUCT=flourite
-TARGET_MERGE_DTBS_WILDCARD := *flourite*
-TARGET_MERGE_DTBOS_WILDCARD := *flourite*
-else
-TARGET_FORCE_PREBUILT_KERNEL := true
-include device/xiaomi/flourite-kernel/BoardConfigKernel.mk
-endif
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -259,10 +246,5 @@ ifneq ($(wildcard device/xiaomi/flourite-miuicamera/device.mk),)
 include device/xiaomi/flourite-miuicamera/BoardConfig.mk
 endif
 
-# Opt in to a complete, separately built source kernel distribution.
-ifneq ($(strip $(FLOURITE_SOURCE_KERNEL_DIST)),)
-ifeq ($(FLOURITE_BUILD_KERNEL_FROM_SOURCE),true)
-$(error Select either FLOURITE_SOURCE_KERNEL_DIST or the legacy kernel build)
-endif
-include $(FLOURITE_SOURCE_KERNEL_DIST)/BoardConfigKernel.mk
-endif
+# Apply source module paths after the vendor partition defaults.
+include kernel/xiaomi/flourite-build/BoardConfigLineage.mk
