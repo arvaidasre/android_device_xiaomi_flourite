@@ -10,6 +10,10 @@ service secure_element_hal_service.aidl /vendor/bin/hw/android.hardware.secure_e
     group system readproc nfc secure_element
     disabled
 
+on init && property:ro.boot.product.vendor.sku=flourite_global
+    # Keystore needs StrongBox before the post-fs-data APEX wait.
+    enable vendor.keymint-strongbox
+
 on post-fs-data && property:ro.boot.product.vendor.sku=flourite_cn
     mkdir /data/vendor/nfc_socket 0770 nfc nfc
     mkdir /data/vendor/nfc 0770 nfc nfc
@@ -22,4 +26,3 @@ on post-fs-data && property:ro.boot.product.vendor.sku=flourite_global
     start vendor.nfc_hal_service
     start vendor.secure_element
     start vendor.weaver_nxp
-    start vendor.keymint-strongbox
