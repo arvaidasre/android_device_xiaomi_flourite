@@ -28,6 +28,9 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 # Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Kernel repositories are built through the explicit device kernel rule.
+PRODUCT_SOURCE_ROOT_DIRS += -kernel/xiaomi
+
 # Keep stock Xiaomi AIDL libraries.
 # Some hardware/xiaomi forks also define these prebuilt module names.
 # Rodin's optional trees depend on that implementation and are not inputs to
