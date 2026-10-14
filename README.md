@@ -8,8 +8,9 @@ LineageOS 24 device tree for POCO M8 Pro 5G / Redmi Note 15 Pro+ 5G
 Place this tree at `device/xiaomi/flourite`. Check out the matching source
 repositories at `kernel/xiaomi/sm7635`, `kernel/xiaomi/sm7635-devicetrees`,
 `kernel/xiaomi/flourite-source-modules` and `kernel/xiaomi/flourite-build`.
-The build recipe's `sources.json` pins their revisions; its README lists the
-toolchain paths and host dependencies.
+The [build recipe](https://github.com/xiaomi-flourite-sm7635/android_kernel_xiaomi_flourite-build/tree/lineage-24.0)
+provides a `manifest.xml` with the pinned source revisions. Its README lists
+the toolchain paths and host dependencies.
 Extract proprietary files into `vendor/xiaomi/flourite` using `extract-files.py`.
 Camera blob corrections are applied during extraction.
 
