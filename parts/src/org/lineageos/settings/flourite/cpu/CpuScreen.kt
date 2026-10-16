@@ -111,10 +111,10 @@ fun CpuScreen(onBack: () -> Unit) {
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    for (id in listOf(0, 3, 7)) {
+                    for (id in CpuTopology.policyIds) {
                         val policy = state?.policies?.firstOrNull { it.id == id }
                         PartsMetricCard(
-                            label = stringResource(when (id) { 0 -> R.string.flourite_cpu_little; 3 -> R.string.flourite_cpu_big; else -> R.string.flourite_cpu_prime }),
+                            label = stringResource(when (id) { CpuTopology.EFFICIENCY -> R.string.flourite_cpu_little; CpuTopology.PERFORMANCE -> R.string.flourite_cpu_big; else -> R.string.flourite_cpu_prime }),
                             value = policy?.current?.let { frequencyText(it) }
                                 ?: stringResource(R.string.cpu_unavailable),
                             icon = Icons.Filled.Speed,
@@ -139,7 +139,7 @@ fun CpuScreen(onBack: () -> Unit) {
                     )
                 }
             }
-            for (id in listOf(0, 3, 7)) {
+            for (id in CpuTopology.policyIds) {
                 item(key = "policy_$id") {
                     val policy = state?.policies?.firstOrNull { it.id == id }
                     PartsPreferenceGroup(title = stringResource(
@@ -297,7 +297,7 @@ private fun FrequencyRangeDialog(
 private fun frequencyText(khz: Long): String = stringResource(R.string.cpu_frequency_mhz, khz / 1000)
 
 private fun clusterTitle(id: Int) = when (id) {
-    0 -> R.string.flourite_cpu_efficiency_cluster
-    3 -> R.string.flourite_cpu_performance_cluster
+    CpuTopology.EFFICIENCY -> R.string.flourite_cpu_efficiency_cluster
+    CpuTopology.PERFORMANCE -> R.string.flourite_cpu_performance_cluster
     else -> R.string.flourite_cpu_prime_cluster
 }

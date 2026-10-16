@@ -1,16 +1,16 @@
 # SPDX-License-Identifier: Apache-2.0
 on property:sys.boot_completed=1
     chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_limits
-    chown root system /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_limits
+    chown root system /sys/devices/system/cpu/cpufreq/policy4/scaling_parts_limits
     chown root system /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_limits
     chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_thermal_bypass
-    chown root system /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_thermal_bypass
+    chown root system /sys/devices/system/cpu/cpufreq/policy4/scaling_parts_thermal_bypass
     chown root system /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_thermal_bypass
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_limits
-    chmod 0660 /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_limits
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/scaling_parts_limits
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_limits
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_thermal_bypass
-    chmod 0660 /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_thermal_bypass
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/scaling_parts_thermal_bypass
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_thermal_bypass
     restorecon /sys/class/kgsl/kgsl-3d0/parts_limits
     restorecon /sys/class/kgsl/kgsl-3d0/parts_thermal_bypass

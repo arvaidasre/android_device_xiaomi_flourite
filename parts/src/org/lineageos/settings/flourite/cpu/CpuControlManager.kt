@@ -4,6 +4,7 @@
 package org.lineageos.settings.flourite.cpu
 
 import java.io.File
+import org.lineageos.settings.flourite.cpu.CpuTopology.policyIds
 
 internal data class CpuPolicyState(
     val id: Int, val cpus: List<Int>, val frequencies: List<Long>,
@@ -55,7 +56,7 @@ internal class CpuControlManager(
             read(File(dir, "scaling_cur_freq"))?.toLongOrNull(), writable, raw != null && control(id).canWrite(), raw?.enabled == true)
     }
     @Synchronized fun readState(): CpuState {
-        val policies = POLICY_IDS.mapNotNull(::readPolicy)
+        val policies = policyIds.mapNotNull(::readPolicy)
         val cores = (0..7).map { id ->
             val active = online(id)
             active?.let { initialCores.putIfAbsent(id, it) }
@@ -63,10 +64,10 @@ internal class CpuControlManager(
             CpuCoreState(id, active, id != 0 && active != null && group.isNotEmpty() &&
                 onlineFile(id).canWrite() && (active == false || group.count { online(it) == true } > 1))
         }
-        return CpuState(policies, cores, POLICY_IDS.filter { id -> policies.none { it.id == id } })
+        return CpuState(policies, cores, policyIds.filter { id -> policies.none { it.id == id } })
     }
     @Synchronized fun setFrequencyRange(id: Int, minimum: Long, maximum: Long): CpuResult {
-        if (id !in POLICY_IDS) return CpuResult(CpuFailure.UNAVAILABLE)
+        if (id !in policyIds) return CpuResult(CpuFailure.UNAVAILABLE)
         val state = readPolicy(id) ?: return CpuResult(CpuFailure.UNAVAILABLE)
         if (!state.lockSupported) return CpuResult(CpuFailure.LOCK_UNSUPPORTED)
         if (minimum > maximum) return CpuResult(CpuFailure.INVALID_RANGE)
@@ -74,7 +75,7 @@ internal class CpuControlManager(
         return writeLimits(id, Limits(true, minimum, maximum))
     }
     @Synchronized fun setFrequencyLock(id: Int, enabled: Boolean): CpuResult {
-        if (id !in POLICY_IDS) return CpuResult(CpuFailure.UNAVAILABLE)
+        if (id !in policyIds) return CpuResult(CpuFailure.UNAVAILABLE)
         if (!enabled) return writeLimits(id, Limits(false, 0, 0))
         val state = readPolicy(id) ?: return CpuResult(CpuFailure.UNAVAILABLE)
         return setFrequencyRange(id, state.minimum, state.maximum)
@@ -115,7 +116,7 @@ internal class CpuControlManager(
     }
     @Synchronized fun restoreInitialValues(): CpuResult {
         var failed = false
-        for (id in POLICY_IDS) if (!setFrequencyLock(id, false).successful) failed = true
+        for (id in policyIds) if (!setFrequencyLock(id, false).successful) failed = true
         // Restore only cores changed by this process, with online operations first.
         for (id in changedCores.sortedBy { initialCores[it] != true }) {
             if (!setCoreOnline(id, initialCores.getValue(id)).successful) failed = true
@@ -130,5 +131,4 @@ internal class CpuControlManager(
             val last = range.lastOrNull()?.toIntOrNull()
             if (first == null || last == null || first !in 0..7 || last !in first..7) emptyList() else (first..last).toList()
         }.distinct()
-    companion object { private val POLICY_IDS = listOf(0, 3, 7) }
 }

@@ -2,6 +2,7 @@
 package org.lineageos.settings.flourite.thermal
 
 import java.io.File
+import org.lineageos.settings.flourite.cpu.CpuTopology
 
 internal data class ThermalState(val mode: String, val error: String, val errno: Int, val profile: String, val resultId: String) {
     val disabled get() = mode == "disabled"
@@ -48,10 +49,15 @@ internal class ThermalControlManager(
     }
 }
 
+internal fun thermalControlNodes(
+    cpuRoot: File = File("/sys/devices/system/cpu"),
+    gpuRoot: File = File("/sys/class/kgsl/kgsl-3d0"),
+) = CpuTopology.policyIds.map {
+    File(cpuRoot, "cpufreq/policy$it/scaling_parts_thermal_bypass")
+} + File(gpuRoot, "parts_thermal_bypass")
+
 internal object ThermalController {
-    private val manager = ThermalControlManager(listOf(0, 3, 7).map {
-        File("/sys/devices/system/cpu/cpufreq/policy$it/scaling_parts_thermal_bypass")
-    } + File("/sys/class/kgsl/kgsl-3d0/parts_thermal_bypass"))
+    private val manager = ThermalControlManager(thermalControlNodes())
     fun read() = manager.read()
     fun request(disabled: Boolean) = manager.request(disabled)
 }

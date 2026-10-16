@@ -1,9 +1,9 @@
 # Xiaomi Parts: exact controls only; keep ordinary QoS files unchanged.
 genfscon sysfs /devices/system/cpu/cpufreq/policy0/scaling_parts_limits u:object_r:vendor_flourite_parts_control:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy3/scaling_parts_limits u:object_r:vendor_flourite_parts_control:s0
+genfscon sysfs /devices/system/cpu/cpufreq/policy4/scaling_parts_limits u:object_r:vendor_flourite_parts_control:s0
 genfscon sysfs /devices/system/cpu/cpufreq/policy7/scaling_parts_limits u:object_r:vendor_flourite_parts_control:s0
 genfscon sysfs /devices/system/cpu/cpufreq/policy0/scaling_parts_thermal_bypass u:object_r:vendor_flourite_parts_control:s0
-genfscon sysfs /devices/system/cpu/cpufreq/policy3/scaling_parts_thermal_bypass u:object_r:vendor_flourite_parts_control:s0
+genfscon sysfs /devices/system/cpu/cpufreq/policy4/scaling_parts_thermal_bypass u:object_r:vendor_flourite_parts_control:s0
 genfscon sysfs /devices/system/cpu/cpufreq/policy7/scaling_parts_thermal_bypass u:object_r:vendor_flourite_parts_control:s0
 genfscon sysfs /devices/system/cpu/cpu1/online u:object_r:vendor_flourite_parts_cpu_online:s0
 genfscon sysfs /devices/system/cpu/cpu2/online u:object_r:vendor_flourite_parts_cpu_online:s0
