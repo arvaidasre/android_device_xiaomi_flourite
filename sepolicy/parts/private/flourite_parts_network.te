@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: Apache-2.0
+system_internal_prop(flouriteparts_tcp_request_prop)
+system_internal_prop(flouriteparts_tcp_status_prop)
+set_prop(flourite_parts_app, flouriteparts_tcp_request_prop)
+get_prop(flourite_parts_app, flouriteparts_tcp_status_prop)
+neverallow { domain -init -flourite_parts_app } flouriteparts_tcp_request_prop:property_service set;
+neverallow { domain -init } flouriteparts_tcp_status_prop:property_service set;
+
+type proc_flourite_tcp_control, fs_type, proc_type, proc_net_type;
+type proc_flourite_tcp_available, fs_type, proc_type, proc_net_type;
+allow flourite_parts_app { proc_flourite_tcp_control proc_flourite_tcp_available }:file r_file_perms;
+allow flourite_parts_app {
+    connectivity_service
+    wifi_service
+    radio_service
+    registry_service
+}:service_manager find;

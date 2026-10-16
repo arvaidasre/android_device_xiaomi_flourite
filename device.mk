@@ -412,6 +412,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
+# Xiaomi Parts
+PRODUCT_PACKAGES += FlouriteParts
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
