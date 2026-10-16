@@ -3,7 +3,7 @@
 <resources>
     <string name="flourite_parts_title" translatable="false">Xiaomi Parts</string>
     <string name="flourite_parts_summary">CPU, GPU, network, temperatures, RAM and battery</string>
-    <string name="flourite_chip" translatable="false">Snapdragon 7s Gen 3 · Qualcomm Adreno</string>
+    <string name="flourite_chip" translatable="false">Snapdragon 7s Gen 4 · Qualcomm Adreno</string>
     <string name="flourite_cpu_little">Efficiency</string>
     <string name="flourite_cpu_big">Performance</string>
     <string name="flourite_cpu_prime">Prime</string>
