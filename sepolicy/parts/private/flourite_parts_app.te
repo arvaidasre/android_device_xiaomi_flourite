@@ -9,6 +9,7 @@ allow flourite_parts_app {
     audio_service
     autofill_service
     batteryproperties_service
+    batterystats_service
     clipboard_service
     legacy_permission_service
     media_session_service
