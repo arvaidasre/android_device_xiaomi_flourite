@@ -12,8 +12,8 @@
     <string name="flourite_cpu_little">Efficienza</string>
     <string name="flourite_cpu_big">Prestazioni</string>
     <string name="flourite_cpu_prime">Prime</string>
-    <string name="flourite_cpu_efficiency_cluster">Core efficienti (0–2)</string>
-    <string name="flourite_cpu_performance_cluster">Core prestazionali (3–6)</string>
+    <string name="flourite_cpu_efficiency_cluster">Core efficienti (0–3)</string>
+    <string name="flourite_cpu_performance_cluster">Core prestazionali (4–6)</string>
     <string name="flourite_cpu_prime_cluster">Core Prime (7)</string>
     <string name="flourite_cpu_limits_info">Gli intervalli manuali restano attivi fino al rilascio o al riavvio. I limiti termici hanno la precedenza, a meno di abilitare esplicitamente il bypass qui sotto. Sono disponibili solo le frequenze già presenti nel kernel.</string>
     <string name="flourite_cpu_limits_active">Intervallo manuale attivo. I limiti termici possono restringerlo. Disattiva per restituire il controllo al sistema.</string>

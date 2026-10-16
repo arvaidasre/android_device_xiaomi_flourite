@@ -7,8 +7,8 @@
     <string name="flourite_cpu_little">Efficiency</string>
     <string name="flourite_cpu_big">Performance</string>
     <string name="flourite_cpu_prime">Prime</string>
-    <string name="flourite_cpu_efficiency_cluster">Efficiency cores (0–2)</string>
-    <string name="flourite_cpu_performance_cluster">Performance cores (3–6)</string>
+    <string name="flourite_cpu_efficiency_cluster">Efficiency cores (0–3)</string>
+    <string name="flourite_cpu_performance_cluster">Performance cores (4–6)</string>
     <string name="flourite_cpu_prime_cluster">Prime core (7)</string>
     <string name="flourite_cpu_limits_info">Manual ranges remain active until released or the phone restarts. Cooling limits still take priority unless you explicitly enable thermal bypass below. Only existing kernel frequencies are available.</string>
     <string name="flourite_cpu_limits_active">Manual range active. Thermal limits may narrow it. Turn off to return control to the system.</string>
