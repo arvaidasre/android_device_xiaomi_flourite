@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: Apache-2.0
+on property:sys.boot_completed=1
+    chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_limits
+    chown root system /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_limits
+    chown root system /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_limits
+    chown root system /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_thermal_bypass
+    chown root system /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_thermal_bypass
+    chown root system /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_thermal_bypass
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_limits
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_limits
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_limits
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy0/scaling_parts_thermal_bypass
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy3/scaling_parts_thermal_bypass
+    chmod 0660 /sys/devices/system/cpu/cpufreq/policy7/scaling_parts_thermal_bypass
+    restorecon /sys/class/kgsl/kgsl-3d0/parts_limits
+    restorecon /sys/class/kgsl/kgsl-3d0/parts_thermal_bypass
+    restorecon /sys/class/kgsl/kgsl-3d0/parts_effective_limits
+    chown root system /sys/class/kgsl/kgsl-3d0/parts_limits
+    chown root system /sys/class/kgsl/kgsl-3d0/parts_thermal_bypass
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/parts_limits
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/parts_thermal_bypass
+    chown root system /sys/devices/system/cpu/cpu1/online
+    chown root system /sys/devices/system/cpu/cpu2/online
+    chown root system /sys/devices/system/cpu/cpu3/online
+    chown root system /sys/devices/system/cpu/cpu4/online
+    chown root system /sys/devices/system/cpu/cpu5/online
+    chown root system /sys/devices/system/cpu/cpu6/online
+    chmod 0664 /sys/devices/system/cpu/cpu1/online
+    chmod 0664 /sys/devices/system/cpu/cpu2/online
+    chmod 0664 /sys/devices/system/cpu/cpu3/online
+    chmod 0664 /sys/devices/system/cpu/cpu4/online
+    chmod 0664 /sys/devices/system/cpu/cpu5/online
+    chmod 0664 /sys/devices/system/cpu/cpu6/online
