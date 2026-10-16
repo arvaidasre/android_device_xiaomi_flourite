@@ -9,7 +9,6 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.BatteryManager
 import android.os.IThermalService
-import android.os.PowerManager
 import android.os.ServiceManager
 import android.os.SystemClock
 import android.os.Temperature
@@ -33,6 +32,10 @@ data class TemperatureSnapshot(
     val cpuMaximumC: Float? get() = maximum(Temperature.TYPE_CPU, preferPhysicalZones = true)
     val gpuMaximumC: Float? get() = maximum(Temperature.TYPE_GPU, preferPhysicalZones = true)
     val skinMaximumC: Float? get() = maximum(Temperature.TYPE_SKIN)
+    // Keep the board thermistor distinct from a HAL-calibrated surface reading.
+    val boardC: Float? get() = sensors.firstOrNull {
+        it.id.startsWith("sysfs:") && it.name == "quiet_therm"
+    }?.valueC
 
     private fun maximum(type: Int, preferPhysicalZones: Boolean = false): Float? {
         val matching = sensors.filter { it.type == type && it.valueC != null }
@@ -44,7 +47,10 @@ data class TemperatureSnapshot(
 }
 
 /** Read from a worker thread. No receiver, timer, cached temperature, or write is retained here. */
-class TemperatureRepository(context: Context) {
+class TemperatureRepository(
+    context: Context,
+    private val zoneRoot: File = File("/sys/class/thermal"),
+) {
     private val context = context.applicationContext
 
     fun read(): TemperatureSnapshot {
@@ -72,8 +78,10 @@ class TemperatureRepository(context: Context) {
                 sensors += TemperatureReading("battery:broadcast", "battery", Temperature.TYPE_BATTERY, value, null)
             }
         }
-        val status = runCatching { service?.currentThermalStatus }.getOrNull()
-            ?: runCatching { context.getSystemService(PowerManager::class.java)?.currentThermalStatus }.getOrNull()
+        // ThermalManagerService returns NONE even when its HAL is unavailable.
+        val status = if (framework.any { it.valueC != null }) {
+            runCatching { service?.currentThermalStatus }.getOrNull()
+        } else null
         return TemperatureSnapshot(
             sensors = sensors.sortedWith(compareBy<TemperatureReading> { it.type }.thenBy { it.id }),
             thermalStatus = status?.takeIf(Temperature::isValidStatus),
@@ -82,11 +90,11 @@ class TemperatureRepository(context: Context) {
     }
 
     private fun readKernelZones(): List<TemperatureReading> {
-        val root = File("/sys/class/thermal")
-        val zones = runCatching { root.listFiles()?.filter { ZONE_NAME.matches(it.name) }.orEmpty() }
+        val zones = runCatching { zoneRoot.listFiles()?.filter { ZONE_NAME.matches(it.name) }.orEmpty() }
             .getOrDefault(emptyList())
         return zones.sortedBy { it.name }.take(128).mapNotNull { zone ->
             val name = readSmallFile(File(zone, "type"))?.takeIf { it.isNotBlank() } ?: return@mapNotNull null
+            if (!TemperatureValues.isCelsiusZone(name)) return@mapNotNull null
             TemperatureReading(
                 id = "sysfs:${zone.name}",
                 name = name,
@@ -127,10 +135,15 @@ internal object TemperatureValues {
     )
 
     fun typeForFlouriteZone(name: String): Int = when (name) {
-        "cpuss-0", "cpuss-1", "cpu0-0", "cpu1-0", "cpu2-0", "cpu3-0",
-        "cpu4-0", "cpu5-0", "cpu6-0", "cpu7-0" -> Temperature.TYPE_CPU
+        "cpuss-0", "cpuss-1", "cpu-0-0-0", "cpu-0-1-0", "cpu-0-2-0", "cpu-0-3-0",
+        "cpu-1-0-0", "cpu-1-0-1", "cpu-1-1-0", "cpu-1-1-1",
+        "cpu-1-2-0", "cpu-1-2-1", "cpu-1-3-0", "cpu-1-3-1" -> Temperature.TYPE_CPU
         "gpuss-0", "gpuss-1" -> Temperature.TYPE_GPU
         "battery" -> Temperature.TYPE_BATTERY
         else -> Temperature.TYPE_UNKNOWN
     }
+
+    // Qualcomm exposes voltage, current and limit states through thermal zones too.
+    fun isCelsiusZone(name: String): Boolean = name != "vbat" && name != "socd" &&
+        !name.contains("-bcl-") && !name.contains("-ibat-")
 }

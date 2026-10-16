@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
 <resources>
-    <string name="flourite_temperature_sources">Le letture provengono dal servizio termico Android e dai sensori leggibili del kernel. I valori CPU e GPU preferiscono le zone hardware identificate esplicitamente. Le misure mancanti restano non disponibili. Lo stato termico Android non è un controllo di sicurezza indipendente e può non riflettere il bypass manuale.</string>
+    <string name="flourite_temperature_board">Scheda (quiet_therm)</string>
+    <string name="flourite_temperature_sources">Le letture provengono dal servizio termico Android e dai sensori leggibili del kernel. I valori CPU e GPU preferiscono le zone hardware identificate esplicitamente. Senza una misura della superficie dal HAL, il riquadro della scheda mostra quiet_therm, non una temperatura calibrata della scocca. Le misure mancanti restano non disponibili. Lo stato termico Android non è disponibile senza letture HAL; non è un controllo di sicurezza indipendente e può non riflettere il bypass manuale.</string>
     <string name="flourite_thermal_restore_title">Ripristina protezione delle frequenze</string>
     <string name="flourite_thermal_apply_failed">Impossibile attivare il bypass su tutti i cluster e sulla GPU. Tutti i controlli sono tornati alla modalità protetta.</string>
     <string name="flourite_thermal_restore_failed">Impossibile ripristinare alcuni controlli del bypass. Riavvia il telefono prima di continuare.</string>

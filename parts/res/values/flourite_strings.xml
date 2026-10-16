@@ -26,5 +26,6 @@
     <string name="flourite_thermal_restore_failed">Some bypass controls could not be restored. Restart the phone before continuing.</string>
     <string name="flourite_gpu_range_summary">Choose an interval from the frequencies supported by this GPU. Software cooling caps remain active unless you explicitly enable bypass on the CPU page. A high minimum increases heat and battery use. The GPU can still power down when idle.</string>
     <string name="flourite_gpu_restore_summary">Release the manual GPU range and use current system requests again. The separate thermal bypass switch is unchanged.</string>
-    <string name="flourite_temperature_sources">Readings come from the Android thermal service and readable kernel sensors. CPU and GPU values prefer explicitly identified hardware zones. Missing measurements remain unavailable. Android thermal status is not an independent safety check and may not reflect manual bypass.</string>
+    <string name="flourite_temperature_board">Board (quiet_therm)</string>
+    <string name="flourite_temperature_sources">Readings come from the Android thermal service and readable kernel sensors. CPU and GPU values prefer explicitly identified hardware zones. Without a surface reading from the HAL, the board card shows quiet_therm, not a calibrated casing temperature. Missing measurements remain unavailable. Android thermal status is unavailable without HAL readings; it is not an independent safety check and may not reflect manual bypass.</string>
 </resources>

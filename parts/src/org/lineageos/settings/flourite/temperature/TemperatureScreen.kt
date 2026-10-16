@@ -121,7 +121,9 @@ fun TemperatureScreen(onBack: () -> Unit) {
                 ) {
                     PartsMetricCard(stringResource(R.string.temperature_battery), temperatureText(snapshot.batteryC),
                         Icons.Filled.BatteryFull, Modifier.weight(1f))
-                    PartsMetricCard(stringResource(R.string.temperature_skin_max), temperatureText(snapshot.skinMaximumC),
+                    PartsMetricCard(stringResource(if (snapshot.skinMaximumC != null)
+                        R.string.temperature_skin_max else R.string.flourite_temperature_board),
+                        temperatureText(snapshot.skinMaximumC ?: snapshot.boardC),
                         Icons.Filled.Sensors, Modifier.weight(1f))
                 }
             }
