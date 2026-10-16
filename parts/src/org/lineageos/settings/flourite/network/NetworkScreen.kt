@@ -341,8 +341,8 @@ private fun algorithmName(algorithm: String): String = when (algorithm) {
     "bic" -> "BIC"
     "westwood" -> "Westwood+"
     "htcp" -> "H-TCP"
-    "bbr" -> "BBR"
-    "bbr3" -> "BBR3"
+    "bbr" -> "BBR (v1)"
+    "bbr3" -> "BBR v3"
     else -> algorithm
 }
 
