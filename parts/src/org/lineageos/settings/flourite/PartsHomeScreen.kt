@@ -12,20 +12,33 @@ import androidx.compose.material.icons.filled.DeveloperBoard
 import androidx.compose.material.icons.filled.BatteryChargingFull
 import androidx.compose.material.icons.filled.Memory
 import androidx.compose.material.icons.filled.Speed
-import androidx.compose.material.icons.filled.Smartphone
 import androidx.compose.material.icons.filled.Wifi
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.produceState
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.lineageos.settings.flourite.ui.PartsInfoCard
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.lineageos.settings.flourite.ui.PartsPreference
 import org.lineageos.settings.flourite.ui.PartsPreferenceGroup
 import org.lineageos.settings.flourite.ui.PartsScaffold
 
 @Composable
 fun PartsHomeScreen(onNavigate: (String) -> Unit) {
-    PartsScaffold(title = stringResource(R.string.flourite_parts_title)) { padding ->
+    val context = LocalContext.current
+    val repository = remember(context) { DeviceInfoRepository(context) }
+    val capacity by produceState<DeviceCapacity?>(null, repository) {
+        value = withContext(Dispatchers.IO) { repository.readCapacity() }
+    }
+
+    PartsScaffold(
+        title = stringResource(R.string.flourite_parts_title),
+        expandedHeight = 184.dp,
+    ) { padding ->
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(
@@ -33,15 +46,13 @@ fun PartsHomeScreen(onNavigate: (String) -> Unit) {
                 bottom = padding.calculateBottomPadding() + 24.dp,
             ),
         ) {
-            item {
-                PartsInfoCard(
-                    title = android.os.Build.MODEL,
-                    body = stringResource(R.string.flourite_chip),
-                    icon = Icons.Filled.Smartphone,
-                    accent = true,
-                )
+            item("device") {
+                DeviceHero(repository.deviceName)
             }
-            item {
+            item("specifications") {
+                DeviceSpecifications(repository.variant, capacity)
+            }
+            item("performance") {
                 PartsPreferenceGroup(title = stringResource(R.string.parts_performance)) {
                     PartsPreference(
                         title = stringResource(R.string.parts_cpu_title),
@@ -63,7 +74,7 @@ fun PartsHomeScreen(onNavigate: (String) -> Unit) {
                     )
                 }
             }
-            item {
+            item("status") {
                 PartsPreferenceGroup(title = stringResource(R.string.parts_device_status)) {
                     PartsPreference(
                         title = stringResource(R.string.network_title),

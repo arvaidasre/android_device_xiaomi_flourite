@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
+<resources>
+    <string name="flourite_device_chip">Snapdragon 7s Gen 4 · 8 core</string>
+    <string name="parts_device_android">Android %1$s</string>
+    <string name="parts_device_maintainer">Maintainer: %1$s</string>
+    <string name="parts_spec_processor">Processore</string>
+    <string name="parts_spec_camera">Fotocamere</string>
+    <string name="parts_spec_ram">RAM</string>
+    <string name="parts_spec_storage">Archiviazione</string>
+    <string name="parts_spec_battery">Batteria</string>
+    <string name="parts_spec_screen">Schermo</string>
+    <string name="parts_spec_camera_poco">Posteriori: 50 MP + 8 MP\nFrontale: 32 MP</string>
+    <string name="parts_spec_camera_redmi_global">Posteriori: 200 MP + 8 MP\nFrontale: 32 MP</string>
+    <string name="parts_spec_camera_redmi_china">Posteriori: 50 MP + teleobiettivo 50 MP + 8 MP\nFrontale: 32 MP</string>
+    <string name="parts_spec_battery_capacity">%1$d mAh (tip.)</string>
+    <string name="parts_spec_display">AMOLED da 6,83\"\n2772 × 1280 · 120 Hz</string>
+    <string name="parts_spec_loading">Caricamento…</string>
+    <string name="parts_spec_unavailable">Non disponibile</string>
+</resources>
