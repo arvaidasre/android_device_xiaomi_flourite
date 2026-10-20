@@ -1,0 +1,13 @@
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+index 88f5728..329b149 100644
+--- a/app/src/main/res/values/strings.xml
++++ b/app/src/main/res/values/strings.xml
+@@ -19,7 +19,7 @@
+     <string name="export_path" translatable="false">PixelOS updates/</string>
+ 
+     <!-- Placeholders: {branch} is net.pixelos.version; {device} is ro.custom.device. -->
+-    <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/PixelOS-AOSP/official_devices/{branch}/API/updater/{device}.json</string>
++    <string name="updater_server_url" translatable="false">https://rom.37-27-238-53.sslip.io/c6ee46f40ccac5caee01/ota/{branch}/{device}.json</string>
+     <string name="changelog_url" translatable="false">https://raw.githubusercontent.com/PixelOS-AOSP/official_devices/{branch}/API/updater/changelogs/{device}.md</string>
+     <string name="certified_prop_url" translatable="false">https://raw.githubusercontent.com/PixelOS-AOSP/official_devices/{branch}/API/updater/CertifiedProps/certified_build_props.apk</string>
+ 

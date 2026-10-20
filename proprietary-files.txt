@@ -30,6 +30,8 @@ vendor/etc/spr_cfg_xiaomi_n3_42_0d_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/spr_cfg_xiaomi_o11_42_02_0a_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/spr_cfg_xiaomi_o11_42_02_0b_cmd_mode_dsc_dsi_panel.xml
 vendor/etc/ambient_para.conf
+vendor/etc/a2dp_audio_policy_configuration.xml
+vendor/etc/bluetooth_qti_audio_policy_configuration.xml
 vendor/etc/external_camera_config.xml
 vendor/etc/libese-tms.conf
 vendor/etc/libnfc-tms.conf

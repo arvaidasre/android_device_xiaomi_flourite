@@ -8,10 +8,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Ship Google Camera instead of Aperture: this is the knob Lineage's product
-# config checks before adding Aperture.
-PRODUCT_NO_CAMERA := true
-
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 

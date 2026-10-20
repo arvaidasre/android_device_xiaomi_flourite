@@ -56,3 +56,22 @@ install_symlink {
     installed_location: "etc/audio/sku_flourite_global_qssi",
     symlink_target: "sku_volcano_qssi",
 }
+
+// PAL resolves /vendor/etc/audio/sku_<sku>/mixer_paths_<target>[_<variant>].xml
+// from the sound card name and only falls back to the variant-less form. Stock
+// ships just the _mtp variants, so a card name without a variant token (e.g.
+// "volcano-snd-card") would leave the HAL with no route table at all - silence.
+// Provide the variant-less names as symlinks so both shapes resolve.
+install_symlink {
+    name: "flourite_audio_mixer_paths_fallback",
+    vendor: true,
+    installed_location: "etc/audio/sku_volcano/mixer_paths_volcano.xml",
+    symlink_target: "mixer_paths_volcano_mtp.xml",
+}
+
+install_symlink {
+    name: "flourite_audio_resourcemanager_fallback",
+    vendor: true,
+    installed_location: "etc/audio/sku_volcano/resourcemanager_volcano.xml",
+    symlink_target: "resourcemanager_volcano_mtp.xml",
+}

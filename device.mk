@@ -85,7 +85,9 @@ PRODUCT_PACKAGES += \
     flourite_audio_vendor_cn_symlink \
     flourite_audio_vendor_cn_qssi_symlink \
     flourite_audio_vendor_global_symlink \
-    flourite_audio_vendor_global_qssi_symlink
+    flourite_audio_vendor_global_qssi_symlink \
+    flourite_audio_mixer_paths_fallback \
+    flourite_audio_resourcemanager_fallback
 
 PRODUCT_PACKAGES += \
     audioadsprpcd \
@@ -362,6 +364,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayFlourite \
+    ApertureOverlayFlourite \
     FrameworkOverlayFlourite \
     LineageSDKOverlayFlourite \
     LineageSettingsOverlayFlourite \
@@ -407,16 +410,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
 
-# Camera: the AOSP/Lineage app (Aperture) does not drive this sensor stack
-# well, so ship Google Camera (GCam port) as the only camera app.
-PRODUCT_PACKAGES += \
-    GoogleCamera
-
-
 # Updater (PixelOS Updater is official-only; this ROM serves its own OTA JSON).
 PRODUCT_PACKAGES += \
-    Updater \
-    UpdaterOverlayFlourite
+    Updater
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-pixelos-updater.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-pixelos-updater.xml
