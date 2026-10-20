@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- {device} = ro.custom.device, {branch} = net.pixelos.version -->
+    <string name="updater_server_url" translatable="false">https://rom.37-27-238-53.sslip.io/c6ee46f40ccac5caee01/ota/{branch}/{device}.json</string>
+</resources>

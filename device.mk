@@ -361,7 +361,6 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    ApertureOverlayFlourite \
     CarrierConfigOverlayFlourite \
     FrameworkOverlayFlourite \
     LineageSDKOverlayFlourite \
@@ -407,6 +406,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
+
+# Camera: the AOSP/Lineage app (Aperture) does not drive this sensor stack
+# well, so ship Google Camera (GCam port) as the only camera app.
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
+
+# Updater (PixelOS Updater is official-only; this ROM serves its own OTA JSON).
+PRODUCT_PACKAGES += \
+    Updater \
+    UpdaterOverlayFlourite
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-pixelos-updater.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-pixelos-updater.xml
+
+# Updater needs a non-empty build type; PixelOS only sets it for official builds.
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.pixelos.build_type=unofficial
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
