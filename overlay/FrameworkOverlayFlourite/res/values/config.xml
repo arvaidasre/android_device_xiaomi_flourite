@@ -843,6 +843,11 @@
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H -33 V 152 H 33 V 0 H 0 Z</string>
 
+    <!-- Physical display shape: 1280x2772 with the stock 156px corner radius.
+         Stock ships a generic 1080x2400 path, which does not match this panel
+         and makes rounded-corner masking/screenshots use the wrong geometry. -->
+    <string name="config_mainDisplayShape" translatable="false">M156 0h968s156 0 156 156v2460s0 156 -156 156h-968s-156 0 -156 -156v-2460s0 -156 156 -156</string>
+
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 

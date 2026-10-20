@@ -62,6 +62,10 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Display
+# 6.83" 1.5K AMOLED, native 1280x2772, 447 ppi, 120 Hz.
+# Density matches stock: ro.sf.lcd_density=520 (build/make/core/sysprop_config.mk).
+TARGET_SCREEN_WIDTH := 1280
+TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_DENSITY := 520
 
 # Filesystem
