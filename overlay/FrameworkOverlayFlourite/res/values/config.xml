@@ -843,6 +843,26 @@
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M 0,0 H -33 V 152 H 33 V 0 H 0 Z</string>
 
+    <!-- Flourite has no wireless charging hardware; stock disables AOSP's
+         built-in wireless charging animation so the lockscreen/battery UI does
+         not show a charging animation it can never satisfy. -->
+    <bool name="config_showBuiltinWirelessChargingAnim">false</bool>
+
+    <!-- Stock allows display timeout down to 6 s (AOSP default is 15 s). -->
+    <integer name="config_minimumScreenOffTimeout">6000</integer>
+
+    <!-- Stock wallpaper scaling ceiling (AOSP default 1.0 under-zooms the
+         wallpaper on this 1280x2772 panel when the launcher parallaxes). -->
+    <dimen name="config_wallpaperMaxScale">1.2</dimen>
+
+    <!-- Volume-down reaches silent directly, as in stock HyperOS and as
+         expected by EEA/Global users. -->
+    <bool name="config_volume_down_to_enter_silent">true</bool>
+
+    <!-- AOD wallpaper is supported by the stock Doze implementation on this
+         panel; keep parity so "always show wallpaper" behaves the same. -->
+    <bool name="config_dozeSupportsAodWallpaper">true</bool>
+
     <!-- Physical display shape: 1280x2772 with the stock 156px corner radius.
          Stock ships a generic 1080x2400 path, which does not match this panel
          and makes rounded-corner masking/screenshots use the wrong geometry. -->

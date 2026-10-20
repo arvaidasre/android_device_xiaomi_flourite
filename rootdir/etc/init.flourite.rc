@@ -45,6 +45,13 @@ on charger
     setprop vendor.powerhal.init 1
 
 on post-fs-data
+    # HyperOS keeps its resolution-switch choice in persist.sys.miui_resolution,
+    # and init.qcom.rc forwards it to vendor.display.mixer_resolution, which
+    # makes the display composited at a downscaled size (the UI looks oversized
+    # and the cutout / rounded-corner geometry no longer lines up). This ROM
+    # always runs the native 1280x2772 mode, so drop any inherited value.
+    setprop persist.sys.miui_resolution ""
+
     mkdir /data/vendor/misc/mi_fp 0770 system system
     mkdir /data/vendor/fpc 0770 system system
     mkdir /data/vendor/fpdump 0770 system system
