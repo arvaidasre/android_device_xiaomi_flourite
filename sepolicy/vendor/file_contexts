@@ -142,6 +142,3 @@
 /sys/devices/virtual/touch/touch_dev/ear_sensor u:object_r:sysfs_tp_virtual_prox:s0
 /sys/devices/virtual/touch/touch_dev/palm_sensor u:object_r:sysfs_tp_virtual_prox:s0
 # Xiaomi Parts controls must retain their labels across recursive restorecon.
-/sys/devices/platform/soc/3d00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/parts_limits u:object_r:vendor_flourite_parts_control:s0
-/sys/devices/platform/soc/3d00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/parts_thermal_bypass u:object_r:vendor_flourite_parts_control:s0
-/sys/devices/platform/soc/3d00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/parts_effective_limits u:object_r:vendor_flourite_parts_status:s0

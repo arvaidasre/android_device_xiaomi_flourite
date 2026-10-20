@@ -1,2 +1,0 @@
-genfscon proc /sys/net/ipv4/tcp_congestion_control u:object_r:proc_flourite_tcp_control:s0
-genfscon proc /sys/net/ipv4/tcp_available_congestion_control u:object_r:proc_flourite_tcp_available:s0
