@@ -243,10 +243,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Proprietary blobs
 include vendor/xiaomi/flourite/BoardConfigVendor.mk
 
-# Match the optional Xiaomi Camera product include.
-ifneq ($(wildcard device/xiaomi/flourite-miuicamera/device.mk),)
-include device/xiaomi/flourite-miuicamera/BoardConfig.mk
-endif
-
 # Apply source module paths after the vendor partition defaults.
 include kernel/xiaomi/flourite-build/BoardConfigLineage.mk

@@ -38,6 +38,4 @@ The kernel, all packaged modules, DTB and DTBO are built from source during
 the normal ROM build. No `device/xiaomi/flourite-kernel` checkout is required.
 See `patches/lineage-24.0` for the required platform compatibility patches.
 
-For Xiaomi Camera, include the matching `device/xiaomi/flourite-miuicamera`
-and `vendor/xiaomi/flourite-miuicamera` repositories. Without that companion,
-the product uses Aperture.
+The product ships Aperture only; no MIUI Camera companion tree is included.
