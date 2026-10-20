@@ -25,6 +25,12 @@ odm/lib64/camera/com.qti.tuned.flourite_sunny_ovx8000_wide_cn_ii.bin
 vendor/bin/hw/android.hardware.nfc-service-tms
 vendor/bin/hw/android.hardware.secure_element-service-tms
 vendor/etc/SEC_THN31_FW_VTP.txt.bin
+vendor/etc/spr_cfg_xiaomi_n11u_42_02_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/spr_cfg_xiaomi_n3_42_0d_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/spr_cfg_xiaomi_o11_42_02_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/spr_cfg_xiaomi_o11_42_02_0b_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/ambient_para.conf
+vendor/etc/external_camera_config.xml
 vendor/etc/libese-tms.conf
 vendor/etc/libnfc-tms.conf
 vendor/etc/libnfc-tms_RF.conf
