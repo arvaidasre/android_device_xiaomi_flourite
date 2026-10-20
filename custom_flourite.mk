@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Inherit from flourite device
 $(call inherit-product, device/xiaomi/flourite/device.mk)
 
-PRODUCT_NAME := lineage_flourite
+PRODUCT_NAME := custom_flourite
 PRODUCT_DEVICE := flourite
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

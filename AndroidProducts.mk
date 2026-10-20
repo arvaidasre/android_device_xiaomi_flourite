@@ -5,7 +5,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_flourite.mk
+    $(LOCAL_DIR)/custom_flourite.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_flourite-cp2a-userdebug
+    custom_flourite-cp2a-userdebug
